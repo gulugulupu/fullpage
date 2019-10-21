@@ -1,0 +1,38 @@
+{
+  "name": "01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "npx babel ./js/index.js -o ./dist/index.js",
+    "webpack": "npx webpack ./dist/index.js  ./dist/index.mini.js",
+    "lint": "npx eslint js",
+    "lintCreate": "npx eslint --init",
+    "postcss":"npx postcss ./css/index.css  -o ./css/build/index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "autoprefixer": "^9.6.5",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.9",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
