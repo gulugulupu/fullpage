@@ -4,8 +4,8 @@ html, body {
 }
 
 html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font: 14px "微软雅黑";
 }
 
@@ -20,4 +20,14 @@ li {
 
 img {
   display: block;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
 }
