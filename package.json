@@ -8,7 +8,7 @@
     "webpack": "npx webpack ./dist/index.js  ./dist/index.mini.js",
     "lint": "npx eslint js",
     "lintCreate": "npx eslint --init",
-    "postcss":"npx postcss ./css/index.css  -o ./css/build/index.css"
+    "postcss": "npx postcss ./css/index.css  -o ./css/build/index.css"
   },
   "keywords": [],
   "author": "",
