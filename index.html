@@ -3,37 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="./src/css/reset/reset.css">
+  <link rel="stylesheet" href="./src/css/index.css">
 </head>
 <body>
 <div id="head-wrap">
   <div class="head">
     <h1 class="logo">
       <a href="javascript:">
-        <img src="img/logo.png" alt="logo">
+        <img src="./static/img/logo.png" alt="logo">
       </a>
     </h1>
     <ul class="nav">
-      <li class="home">
-        <a href="javascript:" class="face">
-          <img src="img/home.png" alt="">
-        </a>
-        <a href="javascript:" class="backface">
-          <img src="img/home_gruen.png" alt="">
+      <li class="home active">
+        <a href="javascript:">
+          <span><img src="./static/img/home.png" alt=""></span>
+          <span><img src="./static/img/home_gruen.png" alt=""></span>
         </a>
       </li>
       <li>
-        <a href="javascript:">Course</a>
+        <a href="javascript:">
+          <span>Course</span>
+          <span>Course</span>
+        </a>
       </li>
       <li>
-        <a href="javascript:">Works</a>
+        <a href="javascript:">
+          <span>Works</span>
+          <span>Works</span>
+        </a>
       </li>
       <li>
-        <a href="javascript:">About</a>
+        <a href="javascript:">
+          <span>About</span>
+          <span>About</span>
+        </a>
       </li>
       <li>
-        <a href="javascript:">Team</a>
+        <a href="javascript:">
+          <span>Team</span>
+          <span>Team</span>
+        </a>
       </li>
     </ul>
     <div class="arrow"></div>
@@ -57,6 +67,14 @@
       <div>team</div>
     </li>
   </ul>
+  <ol class="points">
+    <li class="active"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ol>
 </div>
 </body>
+<script type="text/javascript" src="./src/js/index.min.js"></script>
 </html>
