@@ -101,16 +101,10 @@
       position: relative;
       background-position: 50% 50%;
       background-repeat: no-repeat;
-      div {
+      > div {
         width: 1100px;
         height: 520px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        background: pink;
+        @include center;
       }
 
       &.home {
@@ -123,14 +117,14 @@
       &.course {
         background-image: url("../../static/img/bg2.jpg");
         div {
-          background: skyblue;
+
         }
       }
 
       &.works {
         background-image: url("../../static/img/bg3.jpg");
         div {
-          background: blue;
+
         }
       }
 
