@@ -10,7 +10,7 @@ window.onresize = function () {
   var arrow = document.querySelector('#head-wrap .head .arrow')
   var liNodes = document.querySelectorAll('#head-wrap .head .nav li')
   var contentNode = document.querySelector('#content')
-  var contentLiNodes = document.querySelectorAll('#content .list li')
+  var contentLiNodes = document.querySelectorAll('#content > .list > li')
   var home = liNodes[0]
   //重新计算li的高度
   contentLiNodes.forEach((liNode) => {
