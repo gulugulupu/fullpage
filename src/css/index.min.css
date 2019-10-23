@@ -1,0 +1,163 @@
+@charset "UTF-8";
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font: 14px "微软雅黑";
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+html body #wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: pink;
+  position: relative;
+}
+html body #wrap #header {
+  width: 100%;
+  height: 80px;
+  background: white;
+}
+html body #wrap #header .headerMain {
+  width: 1100px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+}
+html body #wrap #header .headerMain .logo {
+  float: left;
+  margin-top: 30px;
+}
+html body #wrap #header .headerMain .headerNav {
+  float: right;
+  margin-top: 50px;
+}
+html body #wrap #header .headerMain .headerNav .list {
+  display: flex;
+}
+html body #wrap #header .headerMain .headerNav .list li {
+  position: relative;
+  margin-left: 40px;
+}
+html body #wrap #header .headerMain .headerNav .list li:nth-child(1) {
+  margin-top: 2px;
+}
+html body #wrap #header .headerMain .headerNav .list li .cover {
+  color: #f012be;
+  position: absolute;
+  width: 0;
+  overflow: hidden;
+  transition: 1s width;
+}
+html body #wrap #header .headerMain .headerNav .list li .active {
+  width: 100%;
+}
+html body #wrap #header .headerMain .headerNav .list li:hover .cover {
+  width: 100%;
+}
+html body #wrap #header .headerMain .headerNav .list li .down {
+  color: gray;
+}
+html body #wrap #header .headerMain .arrow {
+  position: absolute;
+  width: 21px;
+  height: 11px;
+  background: url("../../static/img/menuIndicator.png");
+  left: 0;
+  bottom: -11px;
+  transition: 0.5s;
+  z-index: 9999;
+}
+html body #wrap .content {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+html body #wrap .content .mainList {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: top 0.5s linear;
+}
+html body #wrap .content .mainList li {
+  position: relative;
+  background: url(../../static/img/bg1.jpg) no-repeat;
+}
+html body #wrap .content .mainList li div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 520px;
+  width: 1100px;
+  background: #17ffb7;
+}
+html body #wrap .content .mainList li.course {
+  background: url(../../static/img/bg2.jpg) no-repeat;
+}
+html body #wrap .content .mainList li.works {
+  background: url(../../static/img/bg3.jpg) no-repeat;
+}
+html body #wrap .content .mainList li.about {
+  background: url(../../static/img/bg4.jpg) no-repeat;
+}
+html body #wrap .content .mainList li.team {
+  background: url(../../static/img/bg5.jpg) no-repeat;
+}
+html body #wrap .content .points {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30px;
+  height: 150px;
+}
+html body #wrap .content .points li {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  margin-top: 8px;
+}
+html body #wrap .content .points li.active {
+  background: deeppink;
+}
+html body #wrap .content .points li:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.min.css.map */
