@@ -18,7 +18,7 @@ window.onload = function () {
     }
   }
 
-  //设置内容区的ul的高度
+  //设置内容区的ul的高度，li拿到content的高度把ul撑开
   contentLiNodes.forEach((liNode) => {
     liNode.style.height = contentNode.offsetHeight + 'px'
   })
@@ -40,6 +40,7 @@ window.onload = function () {
       wheelCallback(event, contentNode.index)
     },300)
   }
+
 }
 
 //防抖节流用的定时器，函数节流，回调中套定时器，先清除定时器。

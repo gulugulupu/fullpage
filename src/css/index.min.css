@@ -290,7 +290,6 @@ input[type=button] {
   right: 0;
   top: 80px;
   bottom: 0;
-  background: gray;
   overflow: hidden;
 }
 #content .list {
@@ -302,6 +301,8 @@ input[type=button] {
 }
 #content .list li {
   position: relative;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 #content .list li div {
   width: 1100px;
@@ -314,17 +315,32 @@ input[type=button] {
   margin: auto;
   background: pink;
 }
+#content .list li.home {
+  background-image: url("../../static/img/bg1.jpg");
+}
 #content .list li.home div {
   background: sandybrown;
+}
+#content .list li.course {
+  background-image: url("../../static/img/bg2.jpg");
 }
 #content .list li.course div {
   background: skyblue;
 }
+#content .list li.works {
+  background-image: url("../../static/img/bg3.jpg");
+}
 #content .list li.works div {
   background: blue;
 }
+#content .list li.about {
+  background-image: url("../../static/img/bg4.jpg");
+}
 #content .list li.about div {
   background: olive;
+}
+#content .list li.team {
+  background-image: url("../../static/img/bg5.jpg");
 }
 #content .list li.team div {
   background: antiquewhite;

@@ -90,7 +90,6 @@
   right: 0;
   top: 80px;
   bottom: 0;
-  background: gray;
   overflow: hidden;
   .list { //ul
     position: absolute;
@@ -100,6 +99,8 @@
     transition: top .5s;
     li {
       position: relative;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
       div {
         width: 1100px;
         height: 520px;
@@ -113,30 +114,35 @@
       }
 
       &.home {
+        background-image: url("../../static/img/bg1.jpg");
         div {
           background: sandybrown;
         }
       }
 
       &.course {
+        background-image: url("../../static/img/bg2.jpg");
         div {
           background: skyblue;
         }
       }
 
       &.works {
+        background-image: url("../../static/img/bg3.jpg");
         div {
           background: blue;
         }
       }
 
       &.about {
+        background-image: url("../../static/img/bg4.jpg");
         div {
           background: olive;
         }
       }
 
       &.team {
+        background-image: url("../../static/img/bg5.jpg");
         div {
           background: antiquewhite;
         }
