@@ -1,0 +1,423 @@
+@charset "UTF-8";
+.clearfix, #app .content .list .works > div .works-2 .adv {
+  zoom: 1;
+}
+.clearfix:after, #app .content .list .works > div .works-2 .adv:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.commonText, #app .content .list .course > div .course-2 {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.commonTitle, #app .content .list .works > div .works-1, #app .content .list .course > div .course-1 {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+#app .content .list .course > div .course-1 {
+  margin: 50px;
+}
+#app .content .list .course > div .course-2 {
+  width: 400px;
+  margin-left: 50px;
+}
+#app .content .list .course > div .course-3 .brand {
+  width: 480px;
+  position: absolute;
+  right: 50px;
+  top: 70px;
+}
+#app .content .list .course > div .course-3 .brand .item {
+  position: relative;
+  float: left;
+  width: 120px;
+  height: 132px;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+#app .content .list .course > div .course-3 .brand .item > span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  transition: transform 0.3s;
+}
+#app .content .list .course > div .course-3 .brand .item > span.pic {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#app .content .list .course > div .course-3 .brand .item > span.text {
+  transform: rotateY(180deg);
+  color: white;
+  background-color: #009EE0;
+  padding: 25px;
+}
+#app .content .list .course > div .course-3 .brand .item:hover {
+  cursor: pointer;
+}
+#app .content .list .course > div .course-3 .brand .item:hover > span.pic {
+  transform: rotateY(180deg);
+}
+#app .content .list .course > div .course-3 .brand .item:hover > span.text {
+  transform: rotateY(360deg);
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(1) > span.pic {
+  background-image: url("../../static/img/bks.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(2) > span.pic {
+  background-image: url("../../static/img/binoli.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(3) > span.pic {
+  background-image: url("../../static/img/gu.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(4) > span.pic {
+  background-image: url("../../static/img/hlx.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(5) > span.pic {
+  background-image: url("../../static/img/lbs.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(6) > span.pic {
+  background-image: url("../../static/img/leonberg.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(7) > span.pic {
+  background-image: url("../../static/img/pcwelt.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(8) > span.pic {
+  background-image: url("../../static/img/tata.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(9) > span.pic {
+  background-image: url("../../static/img/pcwelt.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(10) > span.pic {
+  background-image: url("../../static/img/gu.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(11) > span.pic {
+  background-image: url("../../static/img/hlx.png");
+}
+#app .content .list .course > div .course-3 .brand .item:nth-child(12) > span.pic {
+  background-image: url("../../static/img/binoli.png");
+}
+
+.clearfix, #app .content .list .works > div .works-2 .adv {
+  zoom: 1;
+}
+.clearfix:after, #app .content .list .works > div .works-2 .adv:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.commonText, #app .content .list .course > div .course-2 {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.commonTitle, #app .content .list .works > div .works-1, #app .content .list .course > div .course-1 {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0px) rotateY(0deg);
+  }
+  49% {
+    transform: translateX(-399px) rotateY(0deg);
+  }
+  50% {
+    transform: translateX(-400px) rotateY(180deg);
+  }
+  99% {
+    transform: translateX(-1px) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(0px) rotateY(0deg);
+  }
+}
+#app .content .list .works > div .works-1 {
+  margin: 50px 0 100px 50px;
+}
+#app .content .list .works > div .works-2 {
+  margin-left: 50px;
+}
+#app .content .list .works > div .works-2 .adv > .page {
+  float: left;
+  position: relative;
+  width: 220px;
+  height: 133px;
+  margin: 0 1px;
+  overflow: hidden;
+}
+#app .content .list .works > div .works-2 .adv > .page > span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#app .content .list .works > div .works-2 .adv > .page > span.down {
+  transition: transform 0.5s linear;
+}
+#app .content .list .works > div .works-2 .adv > .page > span.up {
+  background: rgba(25, 25, 25, 0.8);
+  padding: 15px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#app .content .list .works > div .works-2 .adv > .page > span.up .icon {
+  display: block;
+  width: 32px;
+  height: 34px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: url("../../static/img/zoomico.png") no-repeat;
+  transition: background-position 0.5s;
+}
+#app .content .list .works > div .works-2 .adv > .page > span.up .icon:hover {
+  background-position: 0 -36px;
+}
+#app .content .list .works > div .works-2 .adv > .page:hover > span.down {
+  transform: rotate(30deg) scale(1.5);
+}
+#app .content .list .works > div .works-2 .adv > .page:hover > span.up {
+  opacity: 1;
+}
+#app .content .list .works > div .works-2 .adv > .page:nth-child(1) > span.down {
+  background: url("../../static/img/worksimg1.jpg") no-repeat;
+}
+#app .content .list .works > div .works-2 .adv > .page:nth-child(2) > span.down {
+  background: url("../../static/img/worksimg2.jpg") no-repeat;
+}
+#app .content .list .works > div .works-2 .adv > .page:nth-child(3) > span.down {
+  background: url("../../static/img/worksimg3.jpg") no-repeat;
+}
+#app .content .list .works > div .works-2 .adv > .page:nth-child(4) {
+  width: 332px;
+}
+#app .content .list .works > div .works-2 .adv > .page:nth-child(4) > span.down {
+  background: url("../../static/img/worksimg4.jpg") no-repeat;
+}
+#app .content .list .works > div .works-3 {
+  width: 167px;
+  height: 191px;
+  position: absolute;
+  left: 900px;
+  top: 170px;
+  background: url("../../static/img/robot.png") no-repeat;
+  animation: move 3s linear infinite;
+}
+
+.clearfix, #app .content .list .works > div .works-2 .adv {
+  zoom: 1;
+}
+.clearfix:after, #app .content .list .works > div .works-2 .adv:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.commonText, #app .content .list .course > div .course-2 {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.commonTitle, #app .content .list .course > div .course-1, #app .content .list .works > div .works-1 {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+  font: 14px "微软雅黑";
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+html body #app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: gainsboro;
+}
+html body #app .head {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background-color: white !important;
+}
+html body #app .head .headMain {
+  width: 1100px;
+  height: 80px;
+  margin: 0 auto;
+}
+html body #app .head .headMain .logo {
+  float: left;
+  margin-top: 30px;
+}
+html body #app .head .headMain .music {
+  margin-top: 45px;
+  margin-left: 5px;
+  float: left;
+  width: 14px;
+  height: 14px;
+  background: url("../../static/img/musicon.gif");
+}
+html body #app .head .headMain .music.active {
+  background: url("../../static/img/musicoff.gif");
+}
+html body #app .head .headMain .music:hover {
+  cursor: pointer;
+}
+html body #app .head .headMain .nav {
+  float: right;
+  margin-top: 50px;
+}
+html body #app .head .headMain .nav .item {
+  float: left;
+  margin-left: 40px;
+}
+html body #app .head .headMain .nav .item > a {
+  position: relative;
+}
+html body #app .head .headMain .nav .item > a .up {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: black;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.5s;
+}
+html body #app .head .headMain .nav .item > a .down > img {
+  margin-top: 2px;
+}
+html body #app .head .headMain .nav .item:hover > a .up {
+  width: 100%;
+}
+html body #app .head .headMain .nav .item.active > a .up {
+  width: 100%;
+}
+html body #app .head .headMain .arrow {
+  z-index: 9;
+  position: absolute;
+  left: 50%;
+  bottom: -11px;
+  width: 21px;
+  height: 11px;
+  background: url("../../static/img/menuIndicator.png");
+  transition: left 0.5s;
+}
+html body #app .content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  bottom: 0;
+  overflow: hidden;
+}
+html body #app .content > .list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: top 0.3s;
+}
+html body #app .content > .list > li {
+  position: relative;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+html body #app .content > .list > li > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1100px;
+  height: 520px;
+}
+html body #app .content > .list > li.home {
+  background-image: url("../../static/img/bg1.jpg");
+}
+html body #app .content > .list > li.course {
+  background-image: url("../../static/img/bg2.jpg");
+}
+html body #app .content > .list > li.works {
+  background-image: url("../../static/img/bg3.jpg");
+}
+html body #app .content > .list > li.about {
+  background-image: url("../../static/img/bg4.jpg");
+}
+html body #app .content > .list > li.team {
+  background-image: url("../../static/img/bg5.jpg");
+}
+html body #app .content .points {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -75px;
+}
+html body #app .content .points li {
+  margin-bottom: 5px;
+  width: 15px;
+  height: 15px;
+  border: 5px solid pink;
+  border-radius: 50%;
+}
+html body #app .content .points li.active {
+  background-color: white;
+}
+html body #app .content .points li:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.min.css.map */
