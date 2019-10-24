@@ -59,7 +59,7 @@ html {
 /* we use a lot of ULs that aren't bulleted.
 	you'll have to restore the bullets within content,
 	which is fine because they're probably customized anyway */
-ul {
+ul,ol {
   list-style: none;
 }
 

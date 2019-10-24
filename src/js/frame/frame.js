@@ -1,13 +1,16 @@
 import move from './move/move'
 import wheelCallback from './wheel/callback'
 
-window.onload = function () {
+export default function () {
   var arrow = document.querySelector('#head-wrap .head .arrow')
   var liNodes = document.querySelectorAll('#head-wrap .head .nav li')
   var contentNode = document.querySelector('#content')
   var contentLiNodes = document.querySelectorAll('#content > .list > li')
   var pointLiNodes = document.querySelectorAll('#content .points li')
   var home = liNodes[0]
+
+  //move(3)
+
   arrow.style.left = (home.offsetLeft + (home.offsetWidth / 2) + (arrow.offsetWidth / 2)) + "px";
   for (var i = 0; i < liNodes.length; i++) {
     liNodes[i].index = i;
