@@ -1,7 +1,7 @@
 @import "./reset/reset";
 @import "./mixin/mixin";
 @import "./extend/extend";
-@import "./business/home";
+@import "./business/home.scss";
 @import "./business/course";
 @import "./business/works";
 @import "./business/about";
@@ -92,17 +92,19 @@ html {
         right: 0;
         bottom: 0;
         overflow: hidden;
+
         .mainList {
           position: absolute;
           left: 0;
           top: 0;
           width: 100%;
           transition: top .5s linear;
-          li {
-            position: relative;
-            background: url(../../static/img/bg1.jpg) no-repeat;
 
-            div {
+          &>li {
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            &>div {
               position: absolute;
               left: 0;
               top: 0;
@@ -111,33 +113,34 @@ html {
               margin: auto;
               height: 520px;
               width: 1100px;
-              background: pink;
+              //background: pink;
             }
 
-            &.hone {
-
+            &.home {
+              background-image: url(../../static/img/bg1.jpg);
             }
 
             &.course {
-              background: url(../../static/img/bg2.jpg) no-repeat;
+              background-image: url(../../static/img/bg2.jpg);
             }
 
             &.works {
-              background: url(../../static/img/bg3.jpg) no-repeat;
+              background-image: url(../../static/img/bg3.jpg);
             }
 
             &.about {
-              background: url(../../static/img/bg4.jpg) no-repeat;
+              background-image: url(../../static/img/bg4.jpg);
             }
 
             &.team {
-              background: url(../../static/img/bg5.jpg) no-repeat;
+              background-image: url(../../static/img/bg5.jpg);
             }
           }
 
 
         }
-        .points{
+
+        .points {
           position: absolute;
           right: 20px;
           top: 0;
@@ -145,17 +148,19 @@ html {
           margin: auto;
           width: 30px;
           height: 150px;
-          li{
+
+          &>li {
             box-sizing: border-box;
             width: 30px;
             height: 30px;
             border-radius: 50%;
             border: 2px solid pink;
-            &.active{
+
+            &.active {
               background: deeppink;
             }
 
-            &:hover{
+            &:hover {
               cursor: pointer;
             }
           }

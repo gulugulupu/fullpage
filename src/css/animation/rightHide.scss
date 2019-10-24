@@ -1,0 +1,14 @@
+@keyframes rightHide {
+  0%{
+    transform: translateX(0px) translateZ(0px) rotateY(0deg) scale(1);
+    visibility: visible;
+  }
+  50%{
+    transform: translateX(34%) translateZ(0px) rotateY(-30deg) scale(.8);
+    visibility: visible;
+  }
+  100%{
+    transform: translateX(0px) translateZ(-500px) rotateY(0deg) scale(.8);
+    visibility: hidden;
+  }
+}

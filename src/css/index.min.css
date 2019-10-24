@@ -23,13 +23,418 @@ img {
   display: block;
 }
 
-.clearfix {
+.clearfix, #wrap .content .mainList > li.course > div .course3 .brandList {
   zoom: 1;
 }
-.clearfix:after {
+.clearfix:after, #wrap .content .mainList > li.course > div .course3 .brandList:after {
   display: block;
   content: "";
   clear: both;
+}
+
+.commonText, #wrap .content .mainList > li.about > div .about2, #wrap .content .mainList > li.course > div .course2 {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.commonTitle, #wrap .content .mainList > li.about > div .about1, #wrap .content .mainList > li.works > div .works1, #wrap .content .mainList > li.course > div .course1 {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+@keyframes leftHide {
+  0% {
+    transform: translateX(0px) translateZ(0px) rotateY(0deg) scale(1);
+    visibility: visible;
+  }
+  50% {
+    transform: translateX(-34%) translateZ(0px) rotateY(30deg) scale(0.8);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0px) translateZ(-500px) rotateY(0deg) scale(0.8);
+    visibility: hidden;
+  }
+}
+@keyframes rightShow {
+  0% {
+    transform: translateX(0px) translateZ(-500px) rotateY(0deg) scale(0.8);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateX(34%) translateZ(0px) rotateY(-30deg) scale(0.8);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0px) translateZ(0px) rotateY(0deg) scale(1);
+    visibility: visible;
+  }
+}
+@keyframes rightHide {
+  0% {
+    transform: translateX(0px) translateZ(0px) rotateY(0deg) scale(1);
+    visibility: visible;
+  }
+  50% {
+    transform: translateX(34%) translateZ(0px) rotateY(-30deg) scale(0.8);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0px) translateZ(-500px) rotateY(0deg) scale(0.8);
+    visibility: hidden;
+  }
+}
+@keyframes leftShow {
+  0% {
+    transform: translateX(0px) translateZ(-500px) rotateY(0deg) scale(0.8);
+    visibility: hidden;
+  }
+  50% {
+    transform: translateX(-34%) translateZ(0px) rotateY(30deg) scale(0.8);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0px) translateZ(0px) rotateY(0deg) scale(1);
+    visibility: visible;
+  }
+}
+#wrap .content .mainList .home > div .bannerList {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+#wrap .content .mainList .home > div .bannerList > li {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 520px;
+  color: white;
+  visibility: hidden;
+}
+#wrap .content .mainList .home > div .bannerList > li.active {
+  visibility: visible;
+}
+#wrap .content .mainList .home > div .bannerList > li:nth-child(1) {
+  background: pink;
+}
+#wrap .content .mainList .home > div .bannerList > li:nth-child(2) {
+  background: powderblue;
+}
+#wrap .content .mainList .home > div .bannerList > li:nth-child(3) {
+  background: skyblue;
+}
+#wrap .content .mainList .home > div .bannerList > li:nth-child(4) {
+  background: green;
+}
+#wrap .content .mainList .home > div .bannerList > li.leftHide {
+  transform: translateX(0px) translateZ(-500px) rotateY(0deg) scale(0.8);
+  visibility: hidden;
+  animation: leftHide linear 1s;
+}
+#wrap .content .mainList .home > div .bannerList > li.rightShow {
+  transform: translateX(0px) translateZ(0px) rotateY(0deg) scale(1);
+  visibility: visible;
+  animation: rightShow linear 1s;
+}
+#wrap .content .mainList .home > div .bannerList > li.leftShow {
+  transform: translateX(0px) translateZ(0px) rotateY(0deg) scale(1);
+  visibility: visible;
+  animation: leftShow linear 1s;
+}
+#wrap .content .mainList .home > div .bannerList > li.rightHide {
+  transform: translateX(0px) translateZ(-500px) rotateY(0deg) scale(0.8);
+  visibility: hidden;
+  animation: rightHide linear 1s;
+}
+#wrap .content .mainList .home > div .bannerPoints {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  width: 80px;
+}
+#wrap .content .mainList .home > div .bannerPoints > li {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+  box-shadow: 0 0 4px rgba(25, 25, 25, 0.8);
+}
+#wrap .content .mainList .home > div .bannerPoints > li.active {
+  background: yellow;
+}
+#wrap .content .mainList .home > div .bannerPoints > li:hover {
+  cursor: pointer;
+}
+
+.clearfix, #wrap .content .mainList > li.course > div .course3 .brandList {
+  zoom: 1;
+}
+.clearfix:after, #wrap .content .mainList > li.course > div .course3 .brandList:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.commonText, #wrap .content .mainList > li.about > div .about2, #wrap .content .mainList > li.course > div .course2 {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.commonTitle, #wrap .content .mainList > li.about > div .about1, #wrap .content .mainList > li.works > div .works1, #wrap .content .mainList > li.course > div .course1 {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+#wrap .content .mainList > li.course > div .course1 {
+  margin: 50px;
+}
+#wrap .content .mainList > li.course > div .course2 {
+  width: 400px;
+  margin-left: 50px;
+}
+#wrap .content .mainList > li.course > div .course3 {
+  width: 480px;
+  position: absolute;
+  right: 50px;
+  top: 70px;
+}
+#wrap .content .mainList > li.course > div .course3 .brandList .brandItem {
+  position: relative;
+  float: left;
+  width: 120px;
+  height: 132px;
+  overflow: hidden;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+#wrap .content .mainList > li.course > div .course3 .brandList .brandItem > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  backface-visibility: hidden;
+}
+#wrap .content .mainList > li.course > div .course3 .brandList .brandItem > div.backface img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+#wrap .content .mainList > li.course > div .course3 .brandList .brandItem > div.face {
+  transform: rotateY(180deg);
+  background: #009ee0;
+  color: white;
+  padding: 15px;
+}
+#wrap .content .mainList > li.course > div .course3 .brandList .brandItem:hover > div.backface {
+  transform: rotateY(180deg);
+}
+#wrap .content .mainList > li.course > div .course3 .brandList .brandItem:hover > div.face {
+  transform: rotateY(360deg);
+}
+
+.clearfix, #wrap .content .mainList > li.course > div .course3 .brandList {
+  zoom: 1;
+}
+.clearfix:after, #wrap .content .mainList > li.course > div .course3 .brandList:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.commonText, #wrap .content .mainList > li.about > div .about2, #wrap .content .mainList > li.course > div .course2 {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.commonTitle, #wrap .content .mainList > li.about > div .about1, #wrap .content .mainList > li.works > div .works1, #wrap .content .mainList > li.course > div .course1 {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0) rotateY(0);
+  }
+  49% {
+    transform: translateX(-499px) rotateY(0deg);
+  }
+  50% {
+    transform: translateX(-500px) rotateY(180deg);
+  }
+  99% {
+    transform: translateX(-1px) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(0) rotateY(0);
+  }
+}
+#wrap .content .mainList > li.works > div .works1 {
+  margin: 50px 0 100px 50px;
+}
+#wrap .content .mainList > li.works > div .works2 {
+  margin-left: 50px;
+}
+#wrap .content .mainList > li.works > div .works2 .item {
+  float: left;
+  width: 220px;
+  height: 133px;
+  margin: 0 1px;
+  overflow: hidden;
+  position: relative;
+}
+#wrap .content .mainList > li.works > div .works2 .item:nth-child(4) {
+  width: 332px;
+}
+#wrap .content .mainList > li.works > div .works2 .item > img {
+  transition: transform 0.5s;
+}
+#wrap .content .mainList > li.works > div .works2 .item .mask {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(25, 25, 25, 0.8);
+  opacity: 0;
+  transition: opacity 0.5s;
+  color: white;
+}
+#wrap .content .mainList > li.works > div .works2 .item .mask .icon {
+  margin: 10px auto 0;
+  width: 32px;
+  height: 34px;
+  background: url("../../static/img/zoomico.png") no-repeat;
+  transition: background-position 0.5s;
+}
+#wrap .content .mainList > li.works > div .works2 .item .mask .icon:hover {
+  background-position: 0 -36px;
+}
+#wrap .content .mainList > li.works > div .works2 .item:hover > img {
+  transform: rotate(30deg) scale(1.5);
+}
+#wrap .content .mainList > li.works > div .works2 .item:hover .mask {
+  opacity: 1;
+}
+#wrap .content .mainList > li.works > div .works3 {
+  position: absolute;
+  left: 900px;
+  top: 170px;
+  width: 167px;
+  height: 191px;
+  background: url("../../static/img/robot.png") no-repeat;
+  animation: move 2.5s linear infinite;
+}
+
+.clearfix, #wrap .content .mainList > li.course > div .course3 .brandList {
+  zoom: 1;
+}
+.clearfix:after, #wrap .content .mainList > li.course > div .course3 .brandList:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.commonText, #wrap .content .mainList > li.about > div .about2, #wrap .content .mainList > li.course > div .course2 {
+  color: white;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.commonTitle, #wrap .content .mainList > li.about > div .about1, #wrap .content .mainList > li.course > div .course1, #wrap .content .mainList > li.works > div .works1 {
+  color: #009ee0;
+  font-size: 80px;
+  line-height: 0.8;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+#wrap .content .mainList > li.about > div .about1 {
+  margin: 50px 0 100px 50px;
+}
+#wrap .content .mainList > li.about > div .about2 {
+  margin-left: 50px;
+  width: 400px;
+}
+#wrap .content .mainList > li.about > div .spider {
+  position: absolute;
+  width: 260px;
+  height: 200px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+#wrap .content .mainList > li.about > div .spider > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(1.5);
+  transition: transform 1s;
+}
+#wrap .content .mainList > li.about > div .spider:hover > div {
+  transform: scale(1);
+}
+#wrap .content .mainList > li.about > div .spider > ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+#wrap .content .mainList > li.about > div .spider > ul > li {
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+#wrap .content .mainList > li.about > div .spider > ul > li > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 1s top, 1s left;
+}
+#wrap .content .mainList > li.about > div .about3 {
+  left: 750px;
+  top: 50px;
+}
+#wrap .content .mainList > li.about > div .about3 > div {
+  background: url("../../static/img/about2.jpg");
+}
+#wrap .content .mainList > li.about > div .about4 {
+  left: 600px;
+  top: 290px;
+}
+#wrap .content .mainList > li.about > div .about4 > div {
+  background: url("../../static/img/about4.jpg");
 }
 
 html body #wrap {
@@ -109,11 +514,12 @@ html body #wrap .content .mainList {
   width: 100%;
   transition: top 0.5s linear;
 }
-html body #wrap .content .mainList li {
+html body #wrap .content .mainList > li {
   position: relative;
-  background: url(../../static/img/bg1.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
-html body #wrap .content .mainList li div {
+html body #wrap .content .mainList > li > div {
   position: absolute;
   left: 0;
   top: 0;
@@ -122,19 +528,21 @@ html body #wrap .content .mainList li div {
   margin: auto;
   height: 520px;
   width: 1100px;
-  background: pink;
 }
-html body #wrap .content .mainList li.course {
-  background: url(../../static/img/bg2.jpg) no-repeat;
+html body #wrap .content .mainList > li.home {
+  background-image: url(../../static/img/bg1.jpg);
 }
-html body #wrap .content .mainList li.works {
-  background: url(../../static/img/bg3.jpg) no-repeat;
+html body #wrap .content .mainList > li.course {
+  background-image: url(../../static/img/bg2.jpg);
 }
-html body #wrap .content .mainList li.about {
-  background: url(../../static/img/bg4.jpg) no-repeat;
+html body #wrap .content .mainList > li.works {
+  background-image: url(../../static/img/bg3.jpg);
 }
-html body #wrap .content .mainList li.team {
-  background: url(../../static/img/bg5.jpg) no-repeat;
+html body #wrap .content .mainList > li.about {
+  background-image: url(../../static/img/bg4.jpg);
+}
+html body #wrap .content .mainList > li.team {
+  background-image: url(../../static/img/bg5.jpg);
 }
 html body #wrap .content .points {
   position: absolute;
@@ -145,17 +553,17 @@ html body #wrap .content .points {
   width: 30px;
   height: 150px;
 }
-html body #wrap .content .points li {
+html body #wrap .content .points > li {
   box-sizing: border-box;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: 2px solid pink;
 }
-html body #wrap .content .points li.active {
+html body #wrap .content .points > li.active {
   background: deeppink;
 }
-html body #wrap .content .points li:hover {
+html body #wrap .content .points > li:hover {
   cursor: pointer;
 }
 

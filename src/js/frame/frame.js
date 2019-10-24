@@ -1,16 +1,18 @@
 /*eslint-disable */
+import justSelf from "../justSelf/justSelf";
 
 export default function () {
+
   //头部交互
   var arrow = document.querySelector(".arrow");
   //li元素
-  var headLiNodes = document.querySelectorAll(".headerNav .list li");
+  var headLiNodes = document.querySelectorAll(".headerNav .list>li");
   //上层元素
   var coverNodes = document.querySelectorAll(".headerNav .list .cover");
   var content = document.querySelector(".content");
   var mainList = document.querySelector(".mainList");
-  var contentLiNodes = document.querySelectorAll(".content .mainList li");
-  var pointLiNodes = document.querySelectorAll(".content .points li");
+  var contentLiNodes = document.querySelectorAll(".content .mainList>li");
+  var pointLiNodes = document.querySelectorAll(".content .points>li");
 
   //箭头初始位置
   arrow.style.left = headLiNodes[0].offsetLeft + headLiNodes[0].offsetWidth / 2 - arrow.offsetWidth / 2 + "px";
@@ -20,36 +22,39 @@ export default function () {
   });
   //遍历headLiNodes绑定点击事件
   headLiNodes.forEach((item, index) => {
-    item.onclick =  ()=> {
+    item.onclick = () => {
       move(index);
+
     }
   });
   //遍历pointLiNodes绑定点击事件
   pointLiNodes.forEach((item, index) => {
-    item.onclick =  ()=> {
+    item.onclick = () => {
       move(index);
+
     }
   });
   // content监听滚轮事件
-  // chrome ie
   content.index = 0;
-  var timer=null;
-  content.onmousewheel =  (event)=> {
+  var timer = null;
+  // chrome ie
+  content.onmousewheel = (event) => {
     clearTimeout(timer);
-    timer = setTimeout(()=>{
-      scrollFn(event,content.index)
-    },500)
+    timer = setTimeout(() => {
+      scrollFn(event, content.index)
+    }, 500)
   };
   // firefox
-  content.addEventListener('DOMMouseScroll',  (event)=> {
+  content.addEventListener('DOMMouseScroll', (event) => {
     clearTimeout(timer);
-    timer = setTimeout(()=>{
-      scrollFn(event,content.index)
-    },500)
+    timer = setTimeout(() => {
+      scrollFn(event, content.index)
+    }, 500)
 
   });
+
 //封装滚轮callback
-  function scrollFn(event,index) {
+  function scrollFn(event, index) {
     //定义变量记录滚动方向
     var dir = '';
     if (event.wheelDelta) {
@@ -72,16 +77,17 @@ export default function () {
       index > 0 ? index-- : 0;
       move(index)
     } else if (dir === 'down') {
-      index < (pointLiNodes.length-1) ? index++ :(pointLiNodes.length-1) ;
+      index < (pointLiNodes.length - 1) ? index++ : (pointLiNodes.length - 1);
       move(index)
     }
-    content.index = index;
   }
 
   //封装move事件
   function move(index) {
+    content.index = index;
     //cover层排他
     justSelf(coverNodes,index);
+
     //小圆点排他
     justSelf(pointLiNodes,index);
     //箭头move
@@ -89,15 +95,6 @@ export default function () {
     //切换每一屏
     mainList.style.top = -index * content.offsetHeight + "px";
   }
-  //封装排他
-  function justSelf(Nodes,index){
-    Nodes.forEach((item) => {
-      item.classList.remove("active");
-    });
-    Nodes[index].classList.add("active");
-  }
-
-
 
 
 }

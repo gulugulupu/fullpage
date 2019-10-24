@@ -1,0 +1,104 @@
+@import "../animation/leftHide";
+@import "../animation/rightShow";
+@import "../animation/rightHide";
+@import "../animation/leftShow";
+
+#wrap {
+  .content {
+    .mainList {
+      .home {
+        & > div {
+          .bannerList {
+            position: relative;
+            height: 100%;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            & > li {
+              width: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              text-align: center;
+              font-size: 80px;
+              font-weight: bold;
+              line-height: 520px;
+              color: white;
+              visibility: hidden;
+              &.active{
+                visibility: visible;
+              }
+              &:nth-child(1) {
+                background: pink;
+
+              }
+
+              &:nth-child(2) {
+                background: powderblue;
+
+              }
+
+              &:nth-child(3) {
+                background: skyblue;
+              }
+              &:nth-child(4){
+                background: green;
+              }
+
+              &.leftHide {
+                transform: translateX(0px) translateZ(-500px) rotateY(0deg) scale(.8);
+                visibility: hidden;
+                animation: leftHide linear 1s;
+              }
+
+              &.rightShow {
+                transform: translateX(0px) translateZ(0px) rotateY(0deg) scale(1);
+                visibility: visible;
+                animation: rightShow linear 1s;
+              }
+
+              &.leftShow {
+                transform: translateX(0px) translateZ(0px) rotateY(0deg) scale(1);
+                visibility: visible;
+                animation: leftShow linear 1s;
+              }
+
+              &.rightHide {
+                transform: translateX(0px) translateZ(-500px) rotateY(0deg) scale(.8);
+                visibility: hidden;
+                animation: rightHide linear 1s;
+              }
+            }
+          }
+
+          .bannerPoints {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            width: 80px;
+
+            & > li {
+              box-sizing: border-box;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              border: 2px solid black;
+              box-shadow: 0 0 4px rgba(25,25,25,.8);
+
+              &.active {
+                background: yellow;
+              }
+
+              &:hover {
+                cursor: pointer;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
