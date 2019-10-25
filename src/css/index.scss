@@ -6,6 +6,7 @@
 @import "./business/works";
 @import "./business/about";
 @import "./business/team";
+@import "./openShow/openShow";
 
 html {
   body {
@@ -80,7 +81,7 @@ html {
             left: 0;
             bottom: -11px;
             transition: .5s;
-            z-index: 9999;
+            z-index: 998;
           }
         }
       }

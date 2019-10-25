@@ -1,18 +1,20 @@
 /* eslint-disable */
 // import "@babel/polyfill"
+import openShow from "./openShow/openShow";
 import frame from "./frame/frame";
-import home from "./business/home"
 import course from "./business/course"
 import works from "./business/works"
 import about from "./business/about"
 import team from "./business/team"
+window.onload=function(){
+  openShow();
+  frame();
+  works();
+  course();
+  about();
+  team();
+};
 
-   frame();
-   home();
-   works();
-   course();
-   about();
-   team();
 
 window.onresize=function () {//监听屏幕重置
   var arrow = document.querySelector(".arrow");

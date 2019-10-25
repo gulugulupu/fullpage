@@ -2,24 +2,24 @@
 import justSelf from "../justSelf/justSelf";
 
 export default function () {
-  window.onload = function () {
 
+    var content = document.querySelector("#wrap .content");
     var bannerList = document.querySelector(".bannerList");
     var bannerListNodes = bannerList.querySelectorAll("li");
     var bannerPoints = document.querySelector(".bannerPoints");
     var bannerPointsNodes = bannerPoints.querySelectorAll("li");
     var oldIndex = 0;
     var autoIndex = 0;
-    var timer = null;
+    var timer = 0;
     //自动播放
     autoPlay();
     //移出自动播放
-    bannerList.onmouseleave = () => {
+    content.onmouseleave = () => {
       //自动播放
       autoPlay();
     };
     //移入停止
-    bannerList.onmouseenter=()=>{
+    content.onmouseenter=()=>{
       clearInterval(timer);
     };
 
@@ -45,13 +45,14 @@ export default function () {
           bannerListNodes[this.index].classList.add("leftShow");
         }
         oldIndex = this.index;
+        autoIndex = this.index;
       };
 
     });
     //封装autoplay
     function autoPlay(){
+      clearInterval(timer);
       timer = setInterval(() => {
-        autoIndex = oldIndex;
         autoIndex++;
         if (autoIndex > bannerListNodes.length - 1) {
           autoIndex = 0;
@@ -75,5 +76,4 @@ export default function () {
     }
 
 
-  }
 }

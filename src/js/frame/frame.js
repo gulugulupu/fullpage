@@ -1,6 +1,6 @@
 /*eslint-disable */
 import justSelf from "../justSelf/justSelf";
-
+import everyPageShow from "../everyPageShow/everyPageShow";
 export default function () {
 
   //头部交互
@@ -13,7 +13,7 @@ export default function () {
   var mainList = document.querySelector(".mainList");
   var contentLiNodes = document.querySelectorAll(".content .mainList>li");
   var pointLiNodes = document.querySelectorAll(".content .points>li");
-
+  var preIndex=0;
   //箭头初始位置
   arrow.style.left = headLiNodes[0].offsetLeft + headLiNodes[0].offsetWidth / 2 - arrow.offsetWidth / 2 + "px";
   //设置content每个li高度
@@ -84,6 +84,8 @@ export default function () {
 
   //封装move事件
   function move(index) {
+    everyPageShow[index].showinFn();
+    everyPageShow[preIndex].showoutFn();
     content.index = index;
     //cover层排他
     justSelf(coverNodes,index);
@@ -94,6 +96,8 @@ export default function () {
     arrow.style.left = headLiNodes[index].offsetLeft + headLiNodes[index].offsetWidth / 2 - arrow.offsetWidth / 2 + "px";
     //切换每一屏
     mainList.style.top = -index * content.offsetHeight + "px";
+
+    preIndex=index;
   }
 
 

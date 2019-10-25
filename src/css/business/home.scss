@@ -13,6 +13,9 @@
             height: 100%;
             transform-style: preserve-3d;
             perspective: 1000px;
+            transform: translateY(-250px);
+            opacity: 0;
+            transition: transform 1s,opacity 1s;
             & > li {
               width: 100%;
               position: absolute;
@@ -24,9 +27,11 @@
               line-height: 520px;
               color: white;
               visibility: hidden;
-              &.active{
+
+              &.active {
                 visibility: visible;
               }
+
               &:nth-child(1) {
                 background: pink;
 
@@ -40,7 +45,8 @@
               &:nth-child(3) {
                 background: skyblue;
               }
-              &:nth-child(4){
+
+              &:nth-child(4) {
                 background: green;
               }
 
@@ -78,6 +84,9 @@
             margin: auto;
             display: flex;
             width: 80px;
+            transform: translateY(250px);
+            opacity: 0;
+            transition: transform 1s,opacity 1s;
 
             & > li {
               box-sizing: border-box;
@@ -85,7 +94,7 @@
               height: 20px;
               border-radius: 50%;
               border: 2px solid black;
-              box-shadow: 0 0 4px rgba(25,25,25,.8);
+              box-shadow: 0 0 4px rgba(25, 25, 25, .8);
 
               &.active {
                 background: yellow;

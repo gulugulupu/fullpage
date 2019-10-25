@@ -68,6 +68,8 @@
             .about3 {
               left: 750px;
               top: 50px;
+              transform: rotate(-45deg);
+              transition: transform 1s;
 
               & > div {
                 background: url("../../static/img/about2.jpg");
@@ -77,6 +79,8 @@
             .about4 {
               left: 600px;
               top: 290px;
+              transform: rotate(45deg);
+              transition: transform 1s;
 
               & > div {
                 background: url("../../static/img/about4.jpg");
