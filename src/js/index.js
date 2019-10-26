@@ -5,12 +5,23 @@ import "./business/about"
 import "./business/team"*/
 
 import frameFn from './frame/frame'
-import homeFn from './business/home'
+//import homeFn from './business/home'等开机动画完成后再调
 import aboutFn from './business/about'
+import teamFn from './business/team'
+//import inOutAn from './business/inOutAn'
+import bigCover from './business/bigCover'
+
 window.onload = function(){
   frameFn()
-  homeFn()
+  //homeFn()
   aboutFn()
+  teamFn()
+  //测试进出场
+  /*inOutAn[4].outAn()
+  setTimeout(function () {
+    inOutAn[4].inAn()
+  },1000)*/
+  bigCover()
 }
 
 window.onresize = function () {

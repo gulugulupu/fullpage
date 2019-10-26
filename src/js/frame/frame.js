@@ -9,8 +9,6 @@ export default function () {
   var pointLiNodes = document.querySelectorAll('#content .points li')
   var home = liNodes[0]
 
-  //move(3)
-
   arrow.style.left = (home.offsetLeft + (home.offsetWidth / 2) + (arrow.offsetWidth / 2)) + "px";
   for (var i = 0; i < liNodes.length; i++) {
     liNodes[i].index = i;

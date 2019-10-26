@@ -1,9 +1,15 @@
+import inOutArr from '../../business/inOutAn'
+var preIndex = 0
 export default function (index) {
   var arrow = document.querySelector('#head-wrap .head .arrow')
   var liNodes = document.querySelectorAll('#head-wrap .head .nav li')
   var contentNode = document.querySelector('#content')
   var contentul = document.querySelector('#content .list')
   var pointLiNodes = document.querySelectorAll('#content .points li')
+
+  //出入场
+  inOutArr[index].inAn()
+  inOutArr[preIndex].outAn()
 
   //在每次点击导航 或 小圆点时要同步content的index
   contentNode.index = index
@@ -20,4 +26,6 @@ export default function (index) {
 
   //切换每一屏
   contentul.style.top = -index * contentNode.offsetHeight + 'px';
+
+  preIndex = index
 }

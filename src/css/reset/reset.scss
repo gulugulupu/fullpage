@@ -55,6 +55,11 @@ embed {
 html {
   overflow-y: scroll;
 }
+html,body{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
 
 /* we use a lot of ULs that aren't bulleted.
 	you'll have to restore the bullets within content,
